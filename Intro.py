@@ -1,5 +1,9 @@
 import streamlit as st
+from pathlib import Path
 from PIL import Image
+
+BASE_DIR = Path(__file__).resolve().parent
+
 st.title("Aplicaciones de Inteligencia Artificial.")
 
 with st.sidebar:
@@ -17,71 +21,65 @@ st.write(f"Enlace para páginas y ejercicios: [Enlace]({url_ia})")
 col1, col2, col3 = st.columns(3)
 
 with col1:
- 
- st.subheader("Conversión de texto a voz")
- image = Image.open('txt_to_audio2.png')
- st.image(image, width=190)
- st.write("En la siguiente enlace usaremos una de las aplicaciones de Inteligencia Artificial") 
- url = "https://imultimod.streamlit.app/"
- st.write(f"Texto a voz: [Enlace]({url})")
 
- st.subheader("Reconocimiento de Objetos")
- image = Image.open('txt_to_audio.png')
- st.image(image, width=200)
- st.write("En la siguiente enlace veremos como se detectan objetos en Imágenes.") 
- url = "https://yolov5cmc.streamlit.app/"
- st.write(f"YOLO: [Enlace]({url})")
-
- st.subheader("Entrenando Modelos")
- image = Image.open('OIG5.jpg')
- st.image(image, width=200)
- st.write("En la siguiente enlace veremos como puedes usar tu modelo entrenado.") 
- url = "https://xn3pg24ztuv6fdiqon8qn3.streamlit.app/"
- st.write(f"YOLO: [Enlace]({url})")
-
-with col2: 
- st.subheader("Conversión de voz a texto")
- image = Image.open('OIG8.jpg')
- st.image(image, width=200)
- st.write("En la siguiente veremos una aplicación que usa la conversión de voz a texto.") 
- url = "https://traductorw.streamlit.app/"
- st.write(f"Voz a texto: [Enlace]({url})")
-
- st.subheader("Análisis de Datos")
- image = Image.open('data_analisis.png')
- st.image(image, width=190)
- st.write("En la siguiente enlace veremos como se pueden analizar datos usando agentes.") 
- url = "https://dataagente.streamlit.app/"
- st.write(f"Datos: [Enlace]({url})")
-
- st.subheader("Trasnscriptor Audio y Video")
- image = Image.open('OIG3.jpg')
- st.image(image, width=200)
- st.write("En la siguiente enlace veremos como realizamos transcripciones de audio/video.") 
- url = "https://transcript-whisper.streamlit.app/"
- st.write(f"Transcriptor: [Enlace]({url})")
+    st.subheader("Vectores y Matrices ")
+    image = Image.open(BASE_DIR / 'fruta-parecida.png')
+    st.image(image, width=190)
+    st.write("En el siguiente enlace usaremos una aplicación para trabajar vectores y matrices.")
+    url = "https://migue2509-mipstr-frutas-app-edw4gn.streamlit.app/"
+    st.write(f"¿Qué fruta es más parecida?: [Enlace]({url})")
 
 
-with col3: 
- st.subheader("Generación en Contexto")
- image = Image.open('Chat_pdf.png')
- st.image(image, width=190)
- st.write("En la siguiente veremos una aplicación que usa RAG a partir de un documento (PDF).") 
- url = "https://chatpdf-cc.streamlit.app/"
- st.write(f"RAG: [Enlace]({url})")
+    st.subheader("Calculo aplicado, gradiente")
+    image = Image.open(BASE_DIR / 'gradiente.png')
+    st.image(image, width=200)
+    st.write("En este enlace veremos de forma práctica cómo funciona el gradiente y su aplicación en procesos de optimización.")
+    url = "https://pagradiente-g6bbqkpnzklbfme2vmz3dx.streamlit.app/"
+    st.write(f" Descenso de Gradiente Interactivo: [Enlace]({url})")
 
- st.subheader("Análisis de Imagen")
- image = Image.open('OIG4.jpg')
- st.image(image, width=200)
- st.write("En la siguiente enlace veremos la capacidad de análisis en Imágenes.") 
- url = "https://vision2-gpt4o.streamlit.app/"
- st.write(f"Vision: [Enlace]({url})")
- 
- st.subheader("Sistema Ciberfísico")
- image = Image.open('OIG6.jpg')
- st.image(image, width=200)
- st.write("En la siguiente enlace veremos la capacidad de interacción con el mundo físico.") 
- url = "https://vision2-gpt4o.streamlit.app/"
- st.write(f"Vision: [Enlace]({url})")
+    st.subheader("Lógica, Big-O y Vectorización")
+    image = Image.open(BASE_DIR / 'big0.png')
+    st.image(image, width=200)
+    st.write("En esta aplicación exploraremos la lógica de programación, la eficiencia de los algoritmos y el uso de Big-O y vectorización.")
+    url = "https://pamodulodetectoranomalias-8ywdwy2hafzybctqkye4u9.streamlit.app/"
+    st.write(f" Detector de Anomalías: Lógica + Big-O + NumPy: [Enlace]({url})")
 
 
+with col2:
+    st.subheader("Preparación de datos")
+    image = Image.open(BASE_DIR / 'datos.png')
+    st.image(image, width=200)
+    st.write("En esta aplicación trabajaremos la limpieza, organización y transformación de datos para dejarlos listos para su análisis.")
+    url = "https://padetectoranomalias-nspxar85ayspvlutnl4siu.streamlit.app/"
+    st.write(f"Datos: preparación y estructura: [Enlace]({url})")
+
+    st.subheader("Aplicación Preparación de datos")
+    image = Image.open(BASE_DIR / 'aplicacion.png')
+    st.image(image, width=200)
+    st.write("En esta aplicación pondremos en práctica la preparación y análisis de datos ambientales, trabajando con información real.")
+    url = "https://paappnivelcornare-4akbtl7x2h4vvcbdgpn9qj.streamlit.app/"
+    st.write(f" Nivel de ríos y quebradas — CORNARE: [Enlace]({url})")
+
+    st.subheader("Regresión Lineal")
+    image = Image.open(BASE_DIR / 'regresion.png')
+    st.image(image, width=200)
+    st.write("En esta aplicación aprenderemos a analizar la relación entre variables y realizar predicciones mediante regresión lineal.")
+    url = "https://paregresion-p9iafqumuzhxgkimhsvwi7.streamlit.app/"
+    st.write(f" Regresión — Conceptos clave: [Enlace]({url})")
+
+
+with col3:
+
+    st.subheader("Series de Tiempo")
+    image = Image.open(BASE_DIR / 'series.png')
+    st.image(image, width=200)
+    st.write("En esta aplicación analizaremos datos a través del tiempo para identificar patrones, tendencias y realizar predicciones.")
+    url = "https://paappseriestiempo-nd5o4xwqdggrva2vgshudw.streamlit.app/"
+    st.write(f"Series de Tiempo — Sensor IoT interactivo: [Enlace]({url})")
+
+    st.subheader("Predicción y modelado de la calidad de aire.")
+    image = Image.open(BASE_DIR / 'prediccion.png')
+    st.image(image, width=200)
+    st.write("En esta aplicación utilizaremos datos ambientales para estimar y pronosticar la calidad del aire.")
+    url = "https://paapppronosticocornare-8ilkzhqggycmnibcewhtkg.streamlit.app/"
+    st.write(f"Predictor de calidad del aire: [Enlace]({url})")
