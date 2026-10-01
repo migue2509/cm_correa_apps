@@ -1,5 +1,6 @@
-import streamlit as st
 from pathlib import Path
+
+import streamlit as st
 from PIL import Image
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -7,21 +8,20 @@ BASE_DIR = Path(__file__).resolve().parent
 st.title("Aplicaciones de Inteligencia Artificial.")
 
 with st.sidebar:
-  st.subheader("Aplicaciones con Inteligencia Artificial.")
-  parrafo = (
-    "La inteligencia artificial permite mejorar la toma de decisiones con el uso de datos, "
-    "automatizar tareas rutinarias y proporcionar análisis avanzados en tiempo real, lo que "
-    "resulta en una mayor eficiencia y precisión en diversos campos."
-  )
-  st.write(parrafo)
+    st.subheader("Aplicaciones con Inteligencia Artificial.")
+    parrafo = (
+      "La inteligencia artificial permite mejorar la toma de decisiones con el uso de datos, "
+      "automatizar tareas rutinarias y proporcionar análisis avanzados en tiempo real, lo que "
+      "resulta en una mayor eficiencia y precisión en diversos campos."
+    )
+    st.write(parrafo)
 
-url_ia="https://sites.google.com/view/aplicacionesdeia/inicio"
+url_ia = "https://sites.google.com/view/aplicacionesdeia/inicio"
 st.subheader("En el siguiente enlace puedes encontrar páginas y ejercicios prácticos")
 st.write(f"Enlace para páginas y ejercicios: [Enlace]({url_ia})")
-col1, col2, col3 = st.columns(3)
+col1, col2, col3, col4 = st.columns(4)
 
 with col1:
-
     st.subheader("Vectores y Matrices ")
     image = Image.open(BASE_DIR / 'fruta-parecida.png')
     st.image(image, width=190)
@@ -69,7 +69,6 @@ with col2:
 
 
 with col3:
-
     st.subheader("Series de Tiempo")
     image = Image.open(BASE_DIR / 'series.png')
     st.image(image, width=200)
@@ -83,3 +82,27 @@ with col3:
     st.write("En esta aplicación utilizaremos datos ambientales para estimar y pronosticar la calidad del aire.")
     url = "https://paapppronosticocornare-8ilkzhqggycmnibcewhtkg.streamlit.app/"
     st.write(f"Predictor de calidad del aire: [Enlace]({url})")
+    
+    st.subheader("Predicción de sensación termica con ioT")
+    image = Image.open(BASE_DIR / 'termica.png')
+    st.image(image, width=200)
+    st.write("En esta aplicación utilizaremos datos ambientales para estimar y pronosticar la calidad del aire.")
+    url = "https://paapppronosticocornare-8ilkzhqggycmnibcewhtkg.streamlit.app/"
+    st.write(f"Predicción de sensación termica con ioT: [Enlace]({url})")
+
+with col4:
+    st.subheader("De la regresión lineal a la logísitica.")
+    image = Image.open(BASE_DIR / 'logistica.png')
+    st.image(image, width=200)
+    st.write("En esta aplicación analizaremos datos de temperatura, humedad y viento mediante regresión logística para estimar la probabilidad de lluvia, identificar la importancia de cada variable y evaluar las predicciones del modelo.")
+    url = "https://pa-app-regresion-logistica-tpzaolqbadsvdnqbxd6cug.streamlit.app/"
+    st.write(f"Regresion logistica: [Enlace]({url})")
+
+    st.subheader("Clasificación Knn.")
+    image = Image.open(BASE_DIR / 'KN.png')
+    st.image(image, width=200)
+    st.write("En esta aplicación analizaremos datos de suelos de AGROSAVIA mediante el algoritmo KNN para clasificar su fertilidad, explorar la influencia de los vecinos más cercanos y evaluar las predicciones del modelo.")
+    url = "https://m8pfkwwhemh9slj7yxb5va.streamlit.app/"
+    st.write(f"Explora KNN con datos de suelos de AGROSAVIA: [Enlace]({url})")
+    
+    
